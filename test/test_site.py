@@ -14,7 +14,7 @@ def test_open_s6(browser):
     # browser.get('https://www.demoblaze.com/index.html') #конкретная ссылка
     # galaxy_s6 = browser.find_element(By.XPATH, value='//a[text()="Samsung galaxy s6"]') # сохраняем найденный элемент в переменную
     # galaxy_s6.click()
-    product_page = ProductPage()
+    product_page = ProductPage(browser)
     product_page.check_title_is('Samsung galaxy s6')
     # title = browser.find_element(By.CSS_SELECTOR, value='h2')
     # assert title.text == 'Samsung galaxy s6'
