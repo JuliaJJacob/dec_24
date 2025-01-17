@@ -1,11 +1,7 @@
 
-from selenium.webdriver.common.by import By # импорт способов поиска элементов в браузере
-import time
-
-# далее импорт из наших классов
+from selenium.webdriver.common.by import By 
 from pages.homepage import HomePage
 from pages.product import ProductPage
-
 
 def test_open_s6(browser):
     homepage = HomePage(browser)
@@ -26,7 +22,6 @@ def test_two_monitors(browser):
     homepage.click_monitor()
     # monitors_link = browser.find_element(By.CSS_SELECTOR, value='''[onclick="byCat('monitor')"]''')
     # monitors_link.click()
-    time.sleep(5) # BAD!
     homepage.products_count(2)
     # monitors = browser.find_elements(By.CSS_SELECTOR, value='.card') # возвращает список элементов
     # assert len(monitors) == 2 # длина списка
